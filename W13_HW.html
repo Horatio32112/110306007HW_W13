@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+
+<link rel="stylesheet" type="text/css" href="ex.css">
+</head>
+<body>
+	
+	<div class="main" id="main">
+		<h2>Guessing Game</h2>
+		Your Guess(1-100):<br>
+		<input type="text" name="Your Guess(1-100)" id="num"><br>
+		<input type="button" id="go" value="play" onclick="addElement()">
+		<br><p>Result:</p>
+	</div>
+	
+	
+
+
+	<div class="main" id="sp">
+	
+</div>
+</div>
+	<script type="text/javascript">
+		var ranNum=Math.floor(1+((Math.random())*100));
+		var low=1; 
+		var up=100;
+		
+		function addElement(){
+			var s=document.getElementById("num").value;
+
+			var num=parseInt(s,10);
+
+			if(ranNum==num){
+				alert("BOOM!")
+			}else if(num>ranNum){
+				up=num;
+				var newDiv = document.createElement("div");
+				var main=document.getElementById("main");
+				var newContent = document.createTextNode(low+"~"+num);
+				
+				if(num%3==0){
+					newDiv.classList.add("sty0");
+				}else if(num%3==1){
+					newDiv.classList.add("sty1");
+				}else if(num%3==2){
+					newDiv.classList.add("sty2");
+				}
+				newDiv.appendChild(newContent);	
+				document.getElementById("main").appendChild(newDiv);
+			}
+			else{
+				low=num;
+				var newDiv = document.createElement("div");
+				var newContent = document.createTextNode(num+"~"+up);
+				if(num%3==0){
+					newDiv.classList.add("sty0");
+				}else if(num%3==1){
+					newDiv.classList.add("sty1");
+				}else if(num%3==2){
+					newDiv.classList.add("sty2");
+				}
+				newDiv.appendChild(newContent);
+				
+				document.getElementById("main").appendChild(newDiv);
+			}
+
+
+		}
+
+
+	</script>
+</body>
+</html>

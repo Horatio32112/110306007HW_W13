@@ -1,0 +1,45 @@
+.main{
+	background-color: lightpink;
+	width: 50%;
+	margin-left: 25%;
+	
+}
+input#go {
+      background-color: #4c9ed9;
+      color: #ffffff;
+      padding: 20px 40px;
+      border: 1px solid #111;
+    }
+
+    input#go:hover {
+      background-color: #ffffff;
+      color: #4c9ed9;
+      border: 1px solid #111;
+    }
+.sty0{
+	
+	border:2px azure solid ;
+	font-style: oblique;
+	color: red;
+background-color: lightyellow;
+}
+.sty1{
+	color: blue;
+	border:2px black solid ;
+	font-family: sans-serif;
+	background-color: lightgray;
+	
+}
+.sty2{
+	color: green;
+background-color: azure;
+	border:2px brown solid ;
+	
+}
+div{
+	background-color: lightpink;
+	width: 50%;
+	margin-left: 25%;}
+body{
+	background-color: lightcyan;
+}
